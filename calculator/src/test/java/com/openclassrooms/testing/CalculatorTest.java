@@ -73,7 +73,7 @@ public class CalculatorTest {
 
     @ParameterizedTest(name = "{0} x 0 doit être égal à 0")
     @ValueSource(ints = {1, 2 , 42, 1001, 5089})
-    public void shouldReturnZeroIfTheMultiplierIsZero(int arg){
+    void shouldReturnZeroIfTheMultiplierIsZero(int arg){
         // ARRANGE - nothing to do
 
         // ACT
@@ -86,7 +86,7 @@ public class CalculatorTest {
 
     @ParameterizedTest(name = "{0} + {1} doit être égal à {2}")
     @CsvSource({"1,1,2", "2,3,5", "42,57,99"})
-    public void shouldReturnTheAdditionOfMultipleIntegers(int arg1, int arg2, int expectedResult) {
+    void shouldReturnTheAdditionOfMultipleIntegers(int arg1, int arg2, int expectedResult) {
         // ARRANGE - nothing to do
 
         // ACT
@@ -103,7 +103,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void listDigits_shouldReturnsTheListOfDigits_ofPositiveInteger(){
+    void listDigits_shouldReturnsTheListOfDigits_ofPositiveInteger(){
         // GIVEN
         int number = 95897;
 
@@ -118,7 +118,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void listDigits_shouldReturnsTheListOfDigits_ofNegativeInteger(){
+    void listDigits_shouldReturnsTheListOfDigits_ofNegativeInteger(){
         // GIVEN
         int number = -124432;
 
@@ -131,7 +131,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void listDigits_shouldReturnsTheListOfZero_ofZero(){
+    void listDigits_shouldReturnsTheListOfZero_ofZero(){
         // GIVEN
         int number = 0;
 
