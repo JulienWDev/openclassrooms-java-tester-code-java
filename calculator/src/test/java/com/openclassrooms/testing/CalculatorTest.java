@@ -98,7 +98,7 @@ public class CalculatorTest {
 
     @Test
     @Timeout(1)
-    void longCalculationShouldComputeInLessThanOneSecond() {
+    void longCalculationShouldComputeInLessThanOneSecond() throws CalculationTimeoutException {
         calculatorUnderTest.longCalculation();
     }
 

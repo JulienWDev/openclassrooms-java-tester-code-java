@@ -21,11 +21,11 @@ public class Calculator {
         return a * b;
     }
 
-    public void longCalculation() {
+    public void longCalculation() throws CalculationTimeoutException {
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            throw new CalculationTimeoutException("Exception in 'longCalculation()'", e);
         }
     }
 
